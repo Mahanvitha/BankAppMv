@@ -7,13 +7,10 @@
 <title>Insert title here</title>
 <%@ include file= "home.jsp" %>
 </head>
-<body style="text-align: left;">
-	<br>
-	<c:remove var="customer"/>
-	<br>
-	<br>
-	<br>
-	<br> 
-	<h1 text-align = center>Successfully logged out</h1>
+<body>
+<br><br><br>
+<br>
+<br>
+<h3>balance: ${sessionScope.customer.customerAccount.accountBalance}</h3>
 </body>
 </html>

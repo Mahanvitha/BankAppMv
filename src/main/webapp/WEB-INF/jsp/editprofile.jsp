@@ -12,20 +12,20 @@
 	<form:form action="editprofile.do" method="post" modelAttribute="customer">
 		<br>
 		<br>
-		<form:label path="customerId">Customer Id: </form:label>
+		<form:label path="customerId">Customer Id   	:</form:label>
 		<form:input type="number" path="customerId" readonly="readonly"/>
 		<br><br>
-		<form:label path="customerName">Customer Name: </form:label>
+		<form:label path="customerName">Customer Name    	:</form:label>
 		<form:input type="text" path="customerName" placeholder="Enter your Name" required="required"/>
 		<br>
 		<br>
-		<form:label path="customerPassword">Password: </form:label>
+		<form:label path="customerPassword">Password:</form:label>
 		<form:input type="password" path="customerPassword"  readonly="readonly"/>
 		<br>
-		<form:label path="customerEmail">Email Id: </form:label>
+		<form:label path="customerEmail">Email Id			:</form:label>
 		<form:input type="email" path="customerEmail"  placeholder="Enter your Email" required="required"/>
 		<br>
-		<form:label path="customerAddress">Address: </form:label>
+		<form:label path="customerAddress">Address:</form:label>
 		<form:input type="text" path="customerAddress" placeholder="Enter your Address" required="required"/>
 		<br>
 		<form:label path="customerDateOfBirth">Customer Date Of Birth: </form:label>

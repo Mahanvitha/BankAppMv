@@ -76,7 +76,7 @@ img {
 					<a href="transferAmount">Transfer Money</a>
 				</h3>
 				<h3>
-					<a href="checkBalance">Balance Enquiry</a>
+					<a href="checkBalance.do">Balance Enquiry</a>
 				</h3>
 				<h3>
 					<a href="changePassword">Change Password</a>
