@@ -4,6 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -23,9 +25,16 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 		
 		@Override
 		public Customer authenticate(Customer customer) {
+			try {
 			return jdbcTemplate.queryForObject(
 					"SELECT * FROM customers, bankAccounts where customers.accountId = bankAccounts.accountId and customerEmail = ? AND customerPassword = ?",
 					new Object[] { customer.getCustomerEmail(), customer.getCustomerPassword() }, new CustomerRowMapper());
+		}
+			catch(DataAccessException e ) {
+				e.initCause(new EmptyResultDataAccessException("No Customer Found: Expected 1 Actual 0",1));
+				throw e;
+			}
+			
 		}
 
 		@Override

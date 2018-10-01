@@ -9,6 +9,13 @@
 <%@ include file= "home.jsp" %>
 </head>
 <body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <h1>Amount Successfully transfered</h1>
 </body>
 </html>
